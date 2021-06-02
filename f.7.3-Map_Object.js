@@ -8,11 +8,11 @@
  * Map's key can be any value (including functions, objects, or any primitive).
  */ 
 
-// Instance Constructor 
+// Instance Constructor ************************************************ #
   // --> Map() : creates a new Map object
   let numberMap = new Map();
 
-// Setting Object properties (Storing Data)
+// Setting Object properties (Storing Data)  *************************** #
 
   /* ----> 1st approach: Setting Object properties works for Map objects as well
   * but not a recommended approach
@@ -38,11 +38,11 @@
   console.log(contacts.has("Marie")); // -> true
   console.log(contacts.get("Marie")); // -> {phone: "213-222-9655", address: "123 N 1st Ave"}
 
-// Instance Properties ************************ #
+// Instance Properties **************************************************** #
   // ***_ Map.prototype.size : returns the number of key/values pairs in the Map Object
   console.log(contacts.size); // -> 1
 
-// Instance Methods    ************************ #
+// Instance Methods    **************************************************** #
 
 // Map.prototype.set(key, value)
   /* sets the value for the key in the Map object. Returns the Map object */
@@ -81,7 +81,7 @@ let oddNums = new Map();
 oddNums.set("one", 1);
 oddNums.set("three", 3);
 oddNums.set("five", 5);
-// Iteration Methods **************************** #
+// Iteration Methods **************************************************** #
 
 // Map.prototype.keys()
   /* Returns a new iterator object that contains the keys for each element in the Map object */
@@ -103,7 +103,7 @@ oddNums.set("five", 5);
   console.log(entryInterator.next().value);  // -> ["three", 3]
   console.log(entryInterator.next().value);  // -> ["five", 5]
 
-
+// Map usage example
   let myMap = new Map();
   let keyString = "a string";
   let keyObj = {};
@@ -121,7 +121,7 @@ oddNums.set("five", 5);
   console.log(myMap.has({}));
   console.log(myMap.has(function (){}));
 
-
+// Iterating Maps with for .. of
   let loopMap = new Map();
   loopMap.set("0", "zero");
   loopMap.set("1", "one");
@@ -145,3 +145,12 @@ oddNums.set("five", 5);
   // -> one
 
   loopMap.forEach((value, key) => console.log(`${key} = ${value}`))
+
+// Iterating Maps with forEach
+  loopMap.forEach( (value, key) => {
+    console.log(key, "=", value);
+  })
+  // -> 0 = zero
+  // -> 1 = one
+
+
