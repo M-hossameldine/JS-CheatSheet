@@ -67,8 +67,32 @@ console.log(numberIterator.next()); // -> {value:undefined, done: true}
 
 /**************************************************************************************/
 /**************************************************************************************/
+// Consumers of Iterables
 
+const message = 'Hi!';
 
+// for .. of cycle
+  for(let char of message) {
+    console.log(`char = ${char}`);
+  }
+  // -> H -> i -> !
 
+// Spread Operator [...iterable]
+  // creates an array of the iterable items
+  const chars = [...message];
+  console.log(chars); 
+  // -> ["H", 'i', '!'];
 
+// Array Destructuring 
+  const [firstChar, ...restChars] = message;
+  console.log("First Char :", firstChar); // -> H
+  console.log("Rest Chars :", restChars); // -> ['i', '!']
+
+// Array.from()
+  /* 
+    Array.from(iterable, [mapFunction]),
+    also accetps an iterable and transforms it to and array
+  */
+  const charsFromArray = Array.from(message);
+  console.log(charsFromArray); // -> ['H', 'i', '!'];
 
