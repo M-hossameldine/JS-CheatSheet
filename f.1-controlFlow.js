@@ -1,3 +1,25 @@
+/* Content:
+* Function
+* Arrow Function
+* Triggering (Calling) Function with timer - setTimeOut() Vs. setInterval() 
+* Skip Quotes
+* Operators
+    - +, -, /, *
+    - <=, >=, ==, ===, !=, !== 
+    - &&, ||
+    - ++, --
+    - ** exponentiation operator 
+* If Statement
+* new Date() Methods
+    - getDay() //number of week day
+    - getUTCDate() // day number of the month 
+    - getMonth() 
+    - getHours() 
+    - getMinutes() 
+    - getSeconds()  
+    - getFullYear()
+
+*/
 // Function 
 function sum(a, b) {
     document.getElementById('sum').innerHTML = a * b;
@@ -61,7 +83,12 @@ setInterval(changeBgColor, 3000);
 != not equal 
 !== not equal type and value 
 ++, --  
+** exponentiation operator 
 */
+
+// ** Exponentiation operator
+/* It's equivalent to Math.pow, except it also accepts BigInts as operands */
+console.log(2 ** 3); // -> 8 
 
 // case 
 var h = 2;

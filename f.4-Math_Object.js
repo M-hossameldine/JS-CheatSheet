@@ -5,6 +5,7 @@
   Math.floor()
   Math.ceil()
   Math.round()
+  Math.pow()
   Math.abs()
   Math.hypot()
 */
@@ -49,6 +50,9 @@ console.log(Math.ceil(9.4)); // -> 10
 console.log(Math.round(5.3)); // -> 5
 console.log(Math.round(5.8)); // -> 6
 
+// Math.pow()
+/* Function returns the base to the exponent power, as in base^exponent*/
+console.log(Math.pow(2, 3)); // -> 8
 
 // Math.abs()
 /*
