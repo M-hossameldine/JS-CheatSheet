@@ -1,3 +1,25 @@
+/*
+  Math.min()
+  Math.max()
+  Math.random()
+  Math.floor()
+  Math.ceil()
+  Math.round()
+  Math.abs()
+  Math.hypot()
+*/
+
+// Math.min()
+/* Static function return the lowest-valued number passed into it, or NAN if any parameter isn't a number */
+console.log(Math.min(2, -1, 3)); // -> -1
+let arr1 = [2, 8, 0]
+console.log(Math.min(...arr1));  // -> 0
+
+// Math.max()
+/* Function returns the largest of the zero or more number given as input parameters or NAN if any parameter isn't a number*/
+console.log(Math.max(1, 2, 0));          // -> 2
+console.log(Math.max(...[-9, -6, -1]));  // -> -1
+
 // Math.random();
 /*
   * Function returns a psuedorandom number between 0 (inclusive) and 1 (exclusive) when it's called
