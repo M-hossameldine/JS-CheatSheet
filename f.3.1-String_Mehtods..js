@@ -1,5 +1,6 @@
 /*
- - startsWith()
+ * startsWith()
+ * endsWith()
  * The replace method
   - replace ()
   - replaceAll ()
@@ -9,9 +10,13 @@
     - Pass a function rather than a string
 
 */
-// String.prototype.startsWith()
+// startsWith()
   console.log('http//:www.domain.com'.startsWith('http//')); // -> true
 
+// endsWith(searchString, length)
+  console.log("object".endsWith("ct"));    // -> true
+  console.log('To be, or not to be, that is the question.'.endsWith("to be"));     // -> false
+  console.log('To be, or not to be, that is the question.'.endsWith("to be",19));  // -> ture
 /***************************************************************/
 // The replace Method
 /***************************************************************/
