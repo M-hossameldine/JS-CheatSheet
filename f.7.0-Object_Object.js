@@ -2,6 +2,8 @@
 /*
  - Object.freeze()
  - Object.seal()
+ - Object.values()
+ - Object.keys()
 */
 
 // Object.freeze()
@@ -14,11 +16,8 @@
   Object.freeze(obj);
   obj.propOne = 30; // -> Throws an error in the strict mode 
   console.log(obj.propOne); // -> 45
-
-  let obj2 = Object.freeze({value: 2});
-  obj2.value = 5;
-  console.log(obj2.value); // -> 2
-
+  
+/*******************************************************************/
 // Object.seal()
 /*
  - Method seals an object, preventing new properties from being added to it
@@ -34,3 +33,16 @@ console.log(object1.value2); // -> undefined
 
 delete object1.value1;       // -> Cannot delete when sealed 
 console.log(object1.value1); // -> 30
+
+/*******************************************************************/
+// Object.values()
+// returns an array of given object enumerable property values in the same order for..in looping would do, the only difference that for..in loop enumerates  properties in the prototype chain as well.
+
+console.log(Object.values({'a': 1, 'b': true})); // -> [1, true]
+
+/*******************************************************************/
+// Objec.keys()
+// returns an array of given object property names, in the same order that the same loop would
+console.log(Object.key({'a': 1, 'b': false})); // -> ['a', 'b']
+
+/*******************************************************************/
