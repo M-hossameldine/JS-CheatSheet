@@ -3,8 +3,14 @@
 ## Primitives & Object Wrappers
 ### Pirmitives (MDN):
 - Primitive (value / primitive data type) is data that is not and object and has not methods 
-- There are 7-Primitive data types: 
-  string, number, bigInt, boolean, symbol, undefined and null.  
+- There are 7-Primitive data types:  
+  - string
+  - number 
+  - bigInt 
+  - boolean 
+  - symbol 
+  - undefined
+  - null  
 
 #### Primitives are "immutable" 
   They cannot be changed/altered.
@@ -27,16 +33,16 @@ console.log(bar); // -> "BAZ"
 ```
 
 #### Primitive wrapper objects in JavaScript
-* Except for _null_ an _undefined_, all primitive values have object equivalents that wrap around primitive values
+* Except for **null** an **undefined**, all primitive values have object equivalents that wrap around primitive values
 * The wrapper's prototype contain all the method that we call on the primitive values
 
-- _String_ for the string primitive.
-- _Number_ for the number primitive.
-- _BigInt_ for the biging primitive.
-- _Boolea_" for the boolean primitive.
-- _Symbol_ for the symbol primitive.
+  - **String** for the string primitive.
+  - **Number** for the number primitive.
+  - **BigInt** for the biging primitive.
+  - **Boolean**" for the boolean primitive.
+  - **Symbol** for the symbol primitive.
 
-* The wrapper's _valueOf ()_ method returns the primitive value.
+* The wrapper's **valueOf ()** method returns the primitive value.
 ```
 console.log(typeof "str");                       // -> string
 console.log(typeof new String("str"));           // -> object
