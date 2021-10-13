@@ -1,7 +1,9 @@
-# Advanced JS and CS Concepts
+# **Advanced JS and CS Concepts**
 
-## Primitives & Object Wrappers
-### Pirmitives (MDN):
+# Primitives & Object Wrappers
+
+## Pirmitives (MDN):
+
 - Primitive (value / primitive data type) is data that is not and object and has not methods 
 - There are 7-Primitive data types:  
   - string
@@ -12,7 +14,8 @@
   - undefined
   - null  
 
-#### Primitives are "immutable" 
+### Primitives are "immutable"
+
   They cannot be changed/altered.
   There is a differece between a primitive and a variable assigned to aprimitive. The variable may be reassigned a new value, but the existing value can not be changed in the ways that objects, arrays, and functions can be altered.
 ```
@@ -32,7 +35,8 @@ bar = bar.toUpperCase();
 console.log(bar); // -> "BAZ"
 ```
 
-#### Primitive wrapper objects in JavaScript
+### Primitive wrapper objects in JavaScript
+
 * Except for **null** an **undefined**, all primitive values have object equivalents that wrap around primitive values
 * The wrapper's prototype contain all the method that we call on the primitive values
 
@@ -47,4 +51,29 @@ console.log(bar); // -> "BAZ"
 console.log(typeof "str");                       // -> string
 console.log(typeof new String("str"));           // -> object
 console.log(typeof new String("str").valueOf()); // -> string
+```
+
+# Pass By Value & Pass By Reference
+
+## Pass By Value
+
+```
+let name = "Ali";     // points to a memory address i. 0x346
+let nameCopy = name;   // allocationg new memory nameCopy that contains "Ali" i.0x367
+
+name = "Alaa";         // change name
+console.log(name);     // -> Alaa
+console.log(nameCopy); // -> Ali
+```
+
+## Pass By Reference
+
+ Ojects are passed by refernce (also know as reference types) 
+```
+let fruits = ["Cherry", "Mango"]; // points to a certain memory adrress    0x456
+let fruitsCopy = fruits;          // points to the fruits memory address   0x456
+fruits.push("Apple", "Banana");
+
+console.log(fruits);        // -> ["Cheryr", "Mango", "Apple", "Banana"]
+console.log(fruitsCopy);    // -> ["Cherry", "Mango", "Apple", "Banana"]
 ```
